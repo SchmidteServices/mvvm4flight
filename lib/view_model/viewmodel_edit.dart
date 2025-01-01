@@ -27,8 +27,6 @@ abstract class ViewModelEdit<TArgs> extends ViewModelBase<TArgs> {
         return ViewCloseBehaviour.discardDataClose;
       case DialogResultYesNoCancel.cancel:
         return ViewCloseBehaviour.cancelClose;
-      default:
-        throw "Result not mapped";
     }
   }
 

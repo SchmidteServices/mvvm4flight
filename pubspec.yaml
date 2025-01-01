@@ -4,8 +4,8 @@ version: 1.23.0516
 homepage: https://www.MarkusSchmidt.pro
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.3.0"
+  sdk: '>=3.4.3 <4.0.0'
+ 
 
 dependencies:
   flutter:
@@ -13,16 +13,15 @@ dependencies:
 #  flutter_localizations:
 #    sdk: flutter
   
-  intl: ^0.18.0 
   logging: ^1.2.0
-  provider: ^6.0.5
-  get_it: ^7.6.0
+  provider: ^6.1.2
+  get_it: ^8.0.3
   
   event_bus: ^2.0.0
   json_annotation: ^4.8.1
   collection: ^1.15.0
-  uuid: ^3.0.7
-  flutter_markdown: ^0.6.12
+  uuid: ^4.5.1
+  flutter_markdown: ^0.7.4
 
   # SQLite support
   sqflite: ^2.3.0
@@ -30,11 +29,13 @@ dependencies:
   path_provider: ^2.0.11
   
     
+  intl: any
+  path: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  lints: ^2.0.0
+  lints: ^5.1.1
   # https://www.notion.so/markusschmidtpro/Build-JSON-7437222c4aca4607b54dcafb67c2c375?pvs=4
   # dart run build_runner build --delete-conflicting-outputs 
   build_runner:

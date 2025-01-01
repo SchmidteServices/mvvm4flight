@@ -16,7 +16,7 @@ class RelayCommand implements ICommand {
   })  : _canExecute = canExecute,
         _onError = onError;
 
-  bool canExecute() => _canExecute != null ? _canExecute!() : true;
+  bool canExecute() => _canExecute != null ? _canExecute() : true;
 
   Future<void> executeAsync(BuildContext context, [dynamic p]) async {
     try {
@@ -26,7 +26,7 @@ class RelayCommand implements ICommand {
         assert(false, e.toString());
         throw e;
       }
-      _onError!(e);
+      _onError(e);
     }
   }
 }

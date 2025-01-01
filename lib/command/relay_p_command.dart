@@ -12,7 +12,7 @@ class RelayPCommand implements ICommand {
   @protected
   RelayPCommand( this._actionAsync, {bool Function()? canExecute}) : _canExecute = canExecute ;
 
-  bool canExecute() => _canExecute != null ? _canExecute!() : true;
+  bool canExecute() => _canExecute != null ? _canExecute() : true;
 
   Future executeAsync(BuildContext context, [dynamic args]) async {
     if( canExecute()) await _actionAsync(context, args);

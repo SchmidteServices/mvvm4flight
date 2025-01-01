@@ -47,7 +47,7 @@ class BottomBarAction extends StatelessWidget {
         _command = command {
     if (_command == null)
       style = BottomBarActionStyle.missing;
-    else if (!_command!.canExecute()) style = BottomBarActionStyle.disabled;
+    else if (!_command.canExecute()) style = BottomBarActionStyle.disabled;
     _style = style;
   }
 
@@ -110,7 +110,7 @@ class BottomBarAction extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: content)),
         onTap: () async {
-          if (_command != null && _command!.canExecute()) await _command!.executeAsync(context);
+          if (_command != null && _command.canExecute()) await _command.executeAsync(context);
         });
   }
 }
