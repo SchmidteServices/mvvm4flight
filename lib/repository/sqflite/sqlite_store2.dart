@@ -49,6 +49,7 @@ class SQLiteStore {
       databasesPath = await getDatabasesPath();
     }
 
+    
     _filePath = join(databasesPath, _filename);
     _log.info('Database filepath: $_filePath');
 
